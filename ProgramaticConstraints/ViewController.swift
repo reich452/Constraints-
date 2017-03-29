@@ -9,12 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var topLeftButton = UIButton()
+    var topRightButton = UIButton()
+    var bottomLeftButton = UIButton()
+    var bottomRightButton = UIButton()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
      
+    }
+    
+    func setupButtons() {
         
     }
+    
+    func setupButtonConstraints() {
+        
+    }
+    
+    func buttonTapped() {
+        
+    }
+    
 
 
 }
