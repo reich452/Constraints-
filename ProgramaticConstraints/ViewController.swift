@@ -23,6 +23,24 @@ class ViewController: UIViewController {
     
     func setupButtons() {
         
+        // Set colors 
+        topLeftButton.backgroundColor = UIColor.red
+        topRightButton.backgroundColor = UIColor.blue
+        bottomLeftButton.backgroundColor = UIColor.orange
+        bottomRightButton.backgroundColor = UIColor.green
+        
+        // Add targets
+        topLeftButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        topRightButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        bottomRightButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        bottomLeftButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+        // Add buttons as subviews of the ViewController's view 
+        self.view.addSubview(topLeftButton)
+        self.view.addSubview(topRightButton)
+        self.view.addSubview(bottomLeftButton)
+        self.view.addSubview(bottomRightButton)
+        
     }
     
     func setupButtonConstraints() {
