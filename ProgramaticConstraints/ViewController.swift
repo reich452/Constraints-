@@ -45,6 +45,18 @@ class ViewController: UIViewController {
     
     func setupButtonConstraints() {
         
+        topLeftButton.translatesAutoresizingMaskIntoConstraints = false
+        topRightButton.translatesAutoresizingMaskIntoConstraints = false
+        bottomLeftButton.translatesAutoresizingMaskIntoConstraints = false
+        bottomRightButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Height and Width constraints 
+        
+        let topButtonWidths = NSLayoutConstraint(item: topLeftButton, attribute: .width, relatedBy: .equal, toItem: topRightButton, attribute: .width, multiplier: 1, constant: 0)
+        let leftButtonHeights = NSLayoutConstraint(item: topLeftButton, attribute: .width, relatedBy: .equal, toItem: bottomLeftButton, attribute: .height, multiplier: 1, constant: 0)
+        let bottomButtonsWidth = NSLayoutConstraint(item: bottomLeftButton, attribute: .width, relatedBy: .equal, toItem: bottomRightButton, attribute: .width, multiplier: 1, constant: 0)
+        let rightButtonHeights = NSLayoutConstraint(item: topRightButton, attribute: .height, relatedBy: .equal, toItem: bottomRightButton, attribute: .height, multiplier: 1, constant: 0)
+        
     }
     
     func buttonTapped() {
